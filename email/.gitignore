@@ -1,0 +1,109 @@
+# Arquivos e pastas comuns de build
+/build/
+target/
+out/
+dist/
+bin/
+*.log
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+**/target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Gradle
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+*.gradle
+gradle.properties
+
+# IDEs
+
+## IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+## Eclipse / STS
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath/
+.springBeans/
+.sts4-cache/
+
+## VS Code
+.vscode/
+
+## NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Sistema operacional
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Linux
+*~
+.nfs*
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Outros
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+*.rej
+
+# Arquivos de debug
+*.stackdump
+
+# Arquivos de configuração do Git
+*.sublime-project
+*.sublime-workspace
+
+# Arquivo de ajuda/documentação local
+HELP.md
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Cache
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Arquivos de lock
+package-lock.json
+yarn.lock
+
+# Arquivos do sistema de controle de versão
+*.rej
+*.patch
