@@ -10,8 +10,25 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
-      - "3308:3306"
+      - "${DB_PORT_EXTERNAL}:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: email-broker
+    env_file:
+      - .env
+    restart: unless-stopped
+    environment:
+       RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS}
+    ports:
+      - "${RABBITMQ_PORT_AMQP}:5672"
+      - "${RABBITMQ_PORT_MGMT}:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
 volumes:
   mysql_data:
+  rabbitmq_data:
