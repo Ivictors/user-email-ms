@@ -4,6 +4,7 @@ import com.victor.email.enums.EmailStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "tb_email")
@@ -11,29 +12,29 @@ public class EmailModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String emailId;
-    private String userId;
+    private UUID emailId;
+    private UUID userId;
     private String emailFrom;
     private String emailTo;
     private String emailSubject;
-    @Column(columnDefinition = "BODY")
+    @Column(columnDefinition = "TEXT")
     private String emailBody;
     private LocalDateTime sendDateEmail;
     private EmailStatus statusEmail;
 
-    public String getEmailId() {
+    public UUID getEmailId() {
         return emailId;
     }
 
-    public void setEmailId(String emailId) {
+    public void setEmailId(UUID emailId) {
         this.emailId = emailId;
     }
 
-    public String getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(UUID userId) {
         this.userId = userId;
     }
 

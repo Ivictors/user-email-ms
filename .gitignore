@@ -201,6 +201,7 @@ README.html
 
 # Ignorar configurações sensíveis
 src/main/resources/application.properties
+application.yml
 .env
 src/main/resources/data.sql
 private_key.pem
