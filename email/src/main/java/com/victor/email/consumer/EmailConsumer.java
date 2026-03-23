@@ -12,5 +12,4 @@ public class EmailConsumer {
     public void listenEmailQueue(@Payload EmailDto emailDto){
         System.out.println(emailDto.emailTo());
     }
-
 }
