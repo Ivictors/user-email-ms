@@ -46,11 +46,11 @@ Antes de começar, você precisará ter instalado em sua máquina:
 docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
 ```
 
-### 2. Configurações de conexão no aplication properties para o mySQL e Rabbit
-Dentro do aplication properties de cada microserviço:
+### 2. Configurações de conexão no application properties para o mySQL e Rabbit
+Dentro do application properties de cada microsserviço:
 ```
-# server.ports=8081 - cada microserviço tem sua porta.
-# Configuração do Banco de Dados - cada microserviço tem o seu.
+# server.ports=8081 - cada microsserviço tem sua porta.
+# Configuração do Banco de Dados - cada microsserviço tem o seu banco de dados.
 spring.datasource.url=jdbc:mysql://localhost:3306/NOME_DO_SEU_BANCO
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
@@ -63,8 +63,16 @@ spring.rabbitmq.username=guest
 spring.rabbitmq.password=guest
 broker.queue.email.name=default.email
 ```
+### 3. Configurando os Bancos de Dados
+Suba cada conteiner com o comando:
+``docker compose up``
+Para executar localmente - Crie dois bancos de dados no seu MySQL, um para cada microsserviço:
+```
+CREATE DATABASE user_db;
+CREATE DATABASE email_db;
+```
 
-### 3. Clonando o Repositório
+### 4. Clonando o Repositório
 Abra o terminal e clone este repositório:
 
 ```bash
