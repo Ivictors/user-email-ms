@@ -46,7 +46,25 @@ Antes de começar, você precisará ter instalado em sua máquina:
 docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
 ```
 
-### 2. Clonando o Repositório
+### 2. Configurações de conexão no aplication properties para o mySQL e Rabbit
+Dentro do aplication properties de cada microserviço:
+```
+# server.ports=8081 - cada microserviço tem sua porta.
+# Configuração do Banco de Dados - cada microserviço tem o seu.
+spring.datasource.url=jdbc:mysql://localhost:3306/NOME_DO_SEU_BANCO
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+spring.jpa.hibernate.ddl-auto=update
+
+# Configuração do RabbitMQ
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+broker.queue.email.name=default.email
+```
+
+### 3. Clonando o Repositório
 Abra o terminal e clone este repositório:
 
 ```bash
