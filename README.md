@@ -63,10 +63,8 @@ spring.rabbitmq.username=guest
 spring.rabbitmq.password=guest
 broker.queue.email.name=default.email
 ```
-### 3. Configurando os Bancos de Dados
-Suba cada conteiner com o comando:
-``docker compose up``
-Para executar localmente - Crie dois bancos de dados no seu MySQL, um para cada microsserviço:
+
+### 3. Configurando os Bancos de Dados localmente
 ```
 CREATE DATABASE user_db;
 CREATE DATABASE email_db;
@@ -74,6 +72,5 @@ CREATE DATABASE email_db;
 
 ### 4. Clonando o Repositório
 Abra o terminal e clone este repositório:
-
 ```bash
 git clone [https://github.com/Ivictors/user-email-ms.git](https://github.com/Ivictors/user-email-ms)
