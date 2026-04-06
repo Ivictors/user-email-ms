@@ -1,10 +1,10 @@
 # Microsserviços de Cadastro de Usuário e Envio de E-mail
 
-Este projeto consiste em um sistema distribuído baseado na arquitetura de microsserviços, desenvolvido com **Spring Boot**. O objetivo principal é gerenciar o cadastro de usuários e realizar o envio assíncrono de e-mails utilizando mensageria.
+Este projeto consiste em um sistema distribuído baseado na arquitetura de monorepo, desenvolvido com **Spring Boot**. O objetivo principal é gerenciar o cadastro de usuários e realizar o envio assíncrono de e-mails utilizando mensageria.
 
 ## ⚙️ O que o projeto faz?
 
-O sistema é dividido em dois serviços independentes que se comunicam de forma assíncrona:
+O sistema é dividido em dois serviços que se comunicam de forma assíncrona:
 
 1. **User Microservice (Producer):** * Responsável por receber os dados do usuário.
     * Valida se o e-mail já está cadastrado no banco de dados.
